@@ -8,19 +8,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.home.algafood.domain.model.Cozinha;
-import com.home.algafood.domain.repository.CozinhaRepository;
+import com.home.algafood.domain.model.Estado;
+import com.home.algafood.domain.repository.EstadoRepository;
 
 @RestController
-@RequestMapping(value = "/cozinhas", produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
-public class CozinhaController {
+@RequestMapping(value = "/estados", produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+public class EstadoController {
 
     @Autowired
-    private CozinhaRepository cozinhaRepository;
+    private EstadoRepository estadoRepository;
 
     @GetMapping
-    public List<Cozinha> listar() {
-        return cozinhaRepository.listar();
+    public List<Estado> listar() {
+        return estadoRepository.listar();
     }
 
 }
