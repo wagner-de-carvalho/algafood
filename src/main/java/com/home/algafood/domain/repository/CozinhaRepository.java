@@ -6,12 +6,12 @@ import com.home.algafood.domain.model.Cozinha;
 
 public interface CozinhaRepository {
 
-	List<Cozinha> listar();
+    List<Cozinha> listar();
 
-	Cozinha buscar(Long id);
+    Cozinha buscar(Long id);
 
-	Cozinha salvar(Cozinha cozinha);
+    Cozinha salvar(Cozinha cozinha);
 
-	void remover(Cozinha cozinha);
+    void remover(Long id);
 
 }
