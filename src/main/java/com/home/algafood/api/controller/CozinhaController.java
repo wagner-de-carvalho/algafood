@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.home.algafood.domain.exception.EntidadeEmUsoException;
-import com.home.algafood.domain.exception.EntidadeNaoEncontrada;
+import com.home.algafood.domain.exception.EntidadeNaoEncontradaException;
 import com.home.algafood.domain.model.Cozinha;
 import com.home.algafood.domain.repository.CozinhaRepository;
 import com.home.algafood.domain.service.CadastroCozinhaService;
@@ -75,7 +75,7 @@ public class CozinhaController {
 
             return ResponseEntity.noContent().build();
 
-        } catch (EntidadeNaoEncontrada e) {
+        } catch (EntidadeNaoEncontradaException e) {
             return ResponseEntity.notFound().build();
 
         } catch (EntidadeEmUsoException e) {
