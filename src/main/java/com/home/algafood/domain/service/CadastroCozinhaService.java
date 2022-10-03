@@ -23,7 +23,7 @@ public class CadastroCozinhaService {
         try {
             cozinhaRepository.remover(cozinhaId);
         } catch (EmptyResultDataAccessException e) {
-            String mensagem = String.format("Cozinha de código %d não encontrada", cozinhaId);
+            String mensagem = String.format("Não existe cadastro de cozinha com o código %d", cozinhaId);
             throw new EntidadeNaoEncontrada(mensagem);
         } catch (DataIntegrityViolationException e) {
             String mensagem = String.format("Cozinha de código %d não pode ser removida pois está em uso", cozinhaId);
