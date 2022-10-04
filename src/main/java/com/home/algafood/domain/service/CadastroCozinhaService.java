@@ -12,6 +12,7 @@ import com.home.algafood.domain.repository.CozinhaRepository;
 
 @Service
 public class CadastroCozinhaService {
+
     @Autowired
     private CozinhaRepository cozinhaRepository;
 
@@ -22,12 +23,14 @@ public class CadastroCozinhaService {
     public void excluir(Long cozinhaId) {
         try {
             cozinhaRepository.deleteById(cozinhaId);
+
         } catch (EmptyResultDataAccessException e) {
-            String mensagem = String.format("Não existe cadastro de cozinha com o código %d", cozinhaId);
-            throw new EntidadeNaoEncontradaException(mensagem);
+            throw new EntidadeNaoEncontradaException(
+                    String.format("Não existe um cadastro de cozinha com código %d", cozinhaId));
+
         } catch (DataIntegrityViolationException e) {
-            String mensagem = String.format("Cozinha de código %d não pode ser removida pois está em uso", cozinhaId);
-            throw new EntidadeEmUsoException(mensagem);
+            throw new EntidadeEmUsoException(
+                    String.format("Cozinha de código %d não pode ser removida, pois está em uso", cozinhaId));
         }
     }
 
