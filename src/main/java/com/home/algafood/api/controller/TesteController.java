@@ -70,4 +70,9 @@ public class TesteController {
         return restauranteRepository.countByCozinhaId(cozinhaId);
     }
 
+    @GetMapping("/restaurantes/com-frete-gratis")
+    public List<Restaurante> restaurantesComFreteGratis(String nome) {
+        return restauranteRepository.findAll();
+    }
+
 }
