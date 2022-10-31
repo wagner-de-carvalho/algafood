@@ -28,7 +28,7 @@ public class ApiExceptionHandler {
 	}
 	
 	@ExceptionHandler(HttpMediaTypeNotSupportedException.class)
-	public ResponseEntity<?> tratarMediaTypeNotSupportedException(NegocioException e) {
+	public ResponseEntity<?> tratarMediaTypeNotSupportedException() {
 		Problema problema = Problema.builder().dataHora(LocalDateTime.now())
 				.mensagem("O tipo de mídia não é aceito")
 				.build();
