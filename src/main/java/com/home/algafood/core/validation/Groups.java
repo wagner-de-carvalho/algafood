@@ -1,4 +1,4 @@
-package com.home.algafood.domain.model;
+package com.home.algafood.core.validation;
 
 public interface Groups {
 	public interface CozinhaId {

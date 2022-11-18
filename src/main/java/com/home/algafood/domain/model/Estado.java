@@ -8,6 +8,8 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import com.home.algafood.core.validation.Groups;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
