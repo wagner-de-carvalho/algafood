@@ -26,5 +26,15 @@ public class Problem {
 	public static class Field {
 		private String name;
 		private String userMessage;
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public void setUserMessage(String userMessage) {
+			this.userMessage = userMessage;
+		}
+
 	}
+
 }
