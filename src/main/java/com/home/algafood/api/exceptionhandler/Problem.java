@@ -26,7 +26,20 @@ public class Problem {
 	@Setter
 	@Builder
 	public static class Object {
+	
 		private String name;
+		public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
+		}
+		public String getUserMessage() {
+			return userMessage;
+		}
+		public void setUserMessage(String userMessage) {
+			this.userMessage = userMessage;
+		}
 		private String userMessage;
 
 	}
